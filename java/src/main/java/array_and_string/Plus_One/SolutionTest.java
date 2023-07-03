@@ -1,4 +1,4 @@
-package array_and_string.Find_Pivot_Index;
+package array_and_string.Plus_One;
 
 import org.junit.After;
 import org.junit.Before;
@@ -26,29 +26,23 @@ public class SolutionTest {
 
     @Test
     public void Test0() {
-        int[] nums = {1, 7, 3, 6, 5, 6};
-        assertEquals(3, solution.pivotIndex(nums));
-
+        int[] nums = {1, 2, 3};
+        int[] target = {1, 2, 4};
+        assertArrayEquals(target, solution.plusOne(nums));
     }
 
     @Test
     public void Test1() {
-        int[] nums = {1, 2, 3};
-        assertEquals(-1, solution.pivotIndex(nums));
-
+        int[] nums = {4, 3, 2, 1};
+        int[] target = {4, 3, 2, 2};
+        assertArrayEquals(target, solution.plusOne(nums));
     }
 
     @Test
     public void Test2() {
-        int[] nums = {2, 1, -1};
-        assertEquals(0, solution.pivotIndex(nums));
-    }
-
-
-    @Test
-    public void Test3() {
-        int[] nums = {-1,-1,0,1,1,0};
-        assertEquals(5, solution.pivotIndex(nums));
+        int[] nums = {9};
+        int[] target = {1, 0};
+        assertArrayEquals(target, solution.plusOne(nums));
     }
 
 
