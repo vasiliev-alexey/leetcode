@@ -1,4 +1,4 @@
-package array_and_string.Plus_One;
+package array_and_string.Implement_strStr;
 
 import org.junit.After;
 import org.junit.Before;
@@ -6,7 +6,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class SolutionTest {
@@ -26,17 +25,17 @@ public class SolutionTest {
 
     @Test
     public void Test0() {
-        String one = "11";
-        String two = "1";
-        assertEquals("100", solution.addBinary(one, two));
+        String one = "sadbutsad";
+        String two = "sad";
+        assertEquals(0,  solution.strStr(one, two));
     }
 
 
     @Test
     public void Test1() {
-        String one = "1010";
-        String two = "1011";
-        assertEquals("10101", solution.addBinary(one, two));
+        String one = "leetcode";
+        String two = "leeto";
+        assertEquals(-1,  solution.strStr(one, two));
     }
 
 
