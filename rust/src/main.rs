@@ -7,6 +7,7 @@ mod valid_mountain_array;
 mod replace_elements_with_greatest_element_on_right_side;
 mod remove_duplicates_from_sorted_array;
 mod sort_array_by_parity;
+mod reverse_string;
 
 fn main() {
     println!("Hello, world!");

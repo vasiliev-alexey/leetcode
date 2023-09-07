@@ -1,22 +1,21 @@
 package array_and_string.Plus_One;
 
-import java.util.ArrayList;
- import java.util.Collections;
-
 class Solution {
-    public int[] plusOne(int[] digits) {
+    public String addBinary(String a, String b) {
+        int i = a.length() - 1;
+        int j = b.length() - 1;
+        int carry = 0;
+        StringBuilder sb = new StringBuilder();
+        while (i >= 0 || j >= 0 || carry != 0) {
+            int x = i >= 0 ? a.charAt(i) - '0' : 0;
+            int y = j >= 0 ? b.charAt(j) - '0' : 0;
+            int sum = x + y + carry;
+            sb.append(sum % 2);
+            carry = sum / 2;
+            i--;
+            j--;
+        }
+        return sb.reverse().toString();
 
-         var result = new ArrayList<Integer>(digits.length + 1);
-         var rest  =1;
-        for (int i = digits.length - 1; i >= 0; i--) {
-            var tmp = digits[i] + rest;
-            result.add(tmp % 10);
-            rest = tmp / 10;
-        }
-        if (rest == 1) {
-            result.add(1);
-        }
-        Collections.reverse(result);
-        return result.stream().mapToInt(Integer::intValue).toArray();
     }
 }

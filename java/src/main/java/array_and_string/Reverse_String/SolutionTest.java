@@ -1,4 +1,4 @@
-package array_and_string.Plus_One;
+package array_and_string.Reverse_String;
 
 import org.junit.After;
 import org.junit.Before;
@@ -26,19 +26,22 @@ public class SolutionTest {
 
     @Test
     public void Test0() {
-        String one = "11";
-        String two = "1";
-        assertEquals("100", solution.addBinary(one, two));
+        char[] test = {'h', 'e', 'l', 'l', 'o'};
+        char[] expect = {'o', 'l', 'l', 'e', 'h'};
+        solution.reverseString(test);
+        assertArrayEquals(expect,test);
     }
 
 
     @Test
     public void Test1() {
-        String one = "1010";
-        String two = "1011";
-        assertEquals("10101", solution.addBinary(one, two));
-    }
 
+        char[] test = {'H','a','n','n','a','h'};
+        char[] expect = {'h','a','n','n','a','H'};
+        solution.reverseString(test);
+        assertArrayEquals(expect,test);
+
+    }
 
 
 }
